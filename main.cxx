@@ -4,6 +4,7 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
 #include <iostream>
 
 int main() {
@@ -22,5 +23,22 @@ int main() {
   std::cout << "floatToInt(" << y << "): " << floatToInt(y) << std::endl;
   std::cout << "factorial(" << x << "): " << factorial(x) << std::endl;
 
+  // as2
+  Foo foo;
+  std::cout << "as2" << std::endl;
+  std::cout << "bar(): " << foo.bar() << std::endl;
+  std::cout << "baz(): " << foo.baz() << std::endl;
+  std::cout << "quux(): {" << foo.quux()[0] << "," << foo.quux()[1] << "," << foo.quux()[2] << "}" << std::endl;
+
+  fVector2D a(2.0, 4.0);
+  fVector2D b(3.0, 4.0);
+  fVector2D c = a + b;
+  fVector2D expected(5.0, 8.00);
+  
+
+  std::cout << "a + b = c: " << (c == expected) << std::endl;
+  std::cout << "a==b: " << (a == b) << std::endl; 
+
+  //as3
 }
 
