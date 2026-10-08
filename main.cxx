@@ -6,8 +6,21 @@
 #include "as1.hpp"
 #include <iostream>
 
-int main() { 
-  // Example for as1.0
-  homework::printHello();
+int main() {
+  using namespace homework;
+
+  // as1
+  int x = 9;
+  float y = 3.74f;
+  int add_one = x;
+
+  printHello();
+  AddOneRef(add_one);
+
+  std::cout << "AddOneRef(" << x << "): " << add_one << std::endl;
+  std::cout << "isOdd(" << x << "): " << isOdd(x) << std::endl;
+  std::cout << "floatToInt(" << y << "): " << floatToInt(y) << std::endl;
+  std::cout << "factorial(" << x << "): " << factorial(x) << std::endl;
+
 }
 
