@@ -5,6 +5,7 @@
 
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
 
 int main() {
@@ -40,5 +41,19 @@ int main() {
   std::cout << "a==b: " << (a == b) << std::endl; 
 
   //as3
+  Apple apple(Color::green);
+
+  std::cout << "as3" << std::endl;
+  std::cout << apple.getName() << std::endl;
+  if (apple.getColor() == Color::red) {
+    std::cout << "red" << std::endl;
+  }
+  else if (apple.getColor() == Color::green) {
+    std::cout << "green" << std::endl;
+  }
+  else {
+    std::cout << "yellow" << std::endl;
+  }
+  std::cout << apple.getTaste() << std::endl;
 }
 
